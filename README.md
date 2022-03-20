@@ -1,6 +1,6 @@
 # Templates
 
-Simple back (express) and front (react) project templates. Created with custom folder hierarchy to quicktart development.
+Simple back (express) and front (react) project templates. Created with custom folder hierarchy to quickstart development.
 
 ## Start a new project
 
