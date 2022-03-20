@@ -4,7 +4,7 @@ Simple back (express) and front (react) project templates. Created with custom f
 
 ## Start a new project
 
-Clone this repository and delete both, the .git file as well as the README.md file, you won't need them any longer.  
+Clone this repository and delete both, the `.git` as well as the `README.md` files, you won't need them any longer.  
   
 These instrucctios are valid for both folders:  
 Create a git repository on github (if you're planing on setting one up). Readme files are not included in the templates for obvious reasons.  
