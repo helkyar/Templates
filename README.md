@@ -11,12 +11,12 @@ Once everything is set init the local repository. Add the .gitignore file rigth 
 ´´´  
 git init  
 git add .gitignore  
-git commit -m "Add .gitignore"
+git commit -m "Add .gitignore"  
 ´´´  
 Now only thing left is to connect with the remote repository. And install all dependecies. Do it in this order unsless you want to wait till the installation process ends to link the repositories.  
 
 ´´´  
 git remote add origin https://github.com/username/new_repo  
 git push -u origin main  
-npm install
+npm install  
 ´´´
