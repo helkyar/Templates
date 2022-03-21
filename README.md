@@ -8,7 +8,7 @@ Clone this repository and delete both, the `.git` as well as the `README.md` fil
   
 These instrucctios are valid for both folders:  
 Create a git repository on github (if you're planing on setting one up). Readme files are not included in the templates for obvious reasons.  
-Once everything is set, init the local repository. Add the `.gitignore` file rigth away to avoid future problems.  
+Once everything is set, init the local repository. Commit the `.gitignore` file rigth away to avoid future problems.  
 
     git init  
     git add .gitignore  
