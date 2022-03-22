@@ -1,4 +1,4 @@
-const { Client } = require("pg"); // Postgres DB
+const { Client } = require("pg");
 
 module.exports = class Manager {
   static clientParams = {
@@ -9,7 +9,7 @@ module.exports = class Manager {
     port: process.env.DBPORT,
   };
 
-  static async executePostgresQuery(Model, query, params) {
+  static async executeQuery(Model, query, params) {
     let client = new Client(this.clientParams);
     try {
       client.connect();
