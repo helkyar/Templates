@@ -1,8 +1,8 @@
 import React from "react";
 
-export const main = () => {
+export const Main = () => {
   return (
-    <div className="App">
+    <div className="app">
       <h1>Make History</h1>
     </div>
   );
