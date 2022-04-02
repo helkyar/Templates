@@ -19,6 +19,7 @@ Once everything is set, init the local repository. Commit the `.gitignore` file 
 Now only thing left is to connect with the remote repository. And install all dependecies. Do it in this order unsless you want to wait till the installation process ends to link the repositories.  
 
     git remote add origin https://github.com/username/new_repo  
+    git pull origin main  
     git push -u origin main  
     npm install  
 
