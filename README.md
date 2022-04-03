@@ -24,3 +24,10 @@ Finally, install all dependecies. Do it in this order unsless you want to wait t
     git push -u origin main  
     npm install  
 
+## Next Steps
+
+(1) Implement sequelize manager  
+(2) Implement mongo manager 
+(3) Front & Back user register 
+(4) Fully integrated login functionality with token  
+(5) CRUD implementation in all managers
