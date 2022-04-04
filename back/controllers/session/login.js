@@ -18,7 +18,7 @@ async function checkLogin(req, res) {
   }
 
   // Cehck password____________________________________
-  const { username, id, password } = user[0].getObject();
+  const { username, id, password } = user[0];
   const validPassword = await bcrypt.compare(credentials?.password, password);
   if (!validPassword) {
     return res.status(400).json({ error: "credenciales incorrectas" });

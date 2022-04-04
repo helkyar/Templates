@@ -18,7 +18,7 @@ module.exports = class Manager {
         ? await client.query(query, params)
         : await client.query(query);
 
-      return data.rows.map((e) => new Model(e));
+      return data.rows.map((e) => new Model(e).getObject());
 
       //On error returns: "null"; to diferenciate from no data: "[]"
     } catch (error) {
@@ -30,5 +30,4 @@ module.exports = class Manager {
       client.end();
     }
   }
-  static async executeMongoQuery(Model, query, params) {}
 };
