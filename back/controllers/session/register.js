@@ -8,7 +8,6 @@ async function register(req, res) {
   const salt = await bcrypt.genSalt(10);
   data.password = await bcrypt.hash(data.password, salt);
   const user = await UserManager.create(data);
-  console.log(user);
   //(!) Universal manager -> model response
   user !== null
     ? res.status(200).json(user[0])

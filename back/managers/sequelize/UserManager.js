@@ -1,11 +1,12 @@
 const Manager = require("./Manager");
-const model = require("./model/userModel");
+const User = require("./models/userModel");
 
 module.exports = class UserManager extends Manager {
   static async create(params) {
-    return await this.executeQuery(model, params, this.querys.save);
+    return await this.executeQuery(User, this.queries.insert, [params]);
   }
-  static async find({ username }) {
-    return await this.executeQuery(model, username, this.querys.find);
+  static async findName({ username }) {
+    const params = { where: { username } };
+    return await this.executeQuery(User, this.queries.findName, [params]);
   }
 };
