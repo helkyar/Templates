@@ -24,11 +24,11 @@ Now only thing left is to connect with the remote repository. And install all de
 
 ## Functionality
 
-> ·Login/Register  
-> ·Token validation  
-> ·4 Managers (sequelize, mongoose, postgres, mongodb)  
-> ·Boilerplate code as protocol example  
+> · Login/Register  
+> · Token validation  
+> · 4 Managers (sequelize, mongoose, postgres, mongodb)  
+> · Boilerplate code as protocol example  
 
 ## Next Steps
 
-> ·Validation  
+> · Validation  
