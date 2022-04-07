@@ -13,6 +13,9 @@ Once everything is set, init the local repository. Commit the `.gitignore` file 
     git init
     git add .gitignore
     git commit -m "Add gitignore"
+
+Before the inital commit of the project edit the `package.json` files as you see fit (in the `back` folder take into account that none of the database libraries are installed)
+
     git add -A
     git commit -m "Initial commit"
 
@@ -27,8 +30,8 @@ Now only thing left is to connect with the remote repository. And install all de
 > · Login/Register  
 > · Token validation  
 > · 4 Managers (sequelize, mongoose, postgres, mongodb)  
-> · Boilerplate code as protocol example  
+> · Boilerplate code as protocol example
 
 ## Next Steps
 
-> · Validation  
+> · Validation

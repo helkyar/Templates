@@ -1,7 +1,7 @@
 {
-  "name": "urlshorter",
+  "name": "newback",
   "version": "1.0.0",
-  "description": "url shorter",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "test",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/helkyar/URLShorter_back.git"
+    "url": "git+https://github.com/<account>/<repository>.git"
   },
   "keywords": [
     "url",
@@ -19,9 +19,9 @@
   "author": "Javier Palacios",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/helkyar/URLShorter_back/issues"
+    "url": "https://github.com/<account>/<repository>/issues"
   },
-  "homepage": "https://github.com/helkyar/URLShorter_back#readme",
+  "homepage": "https://github.com/<account>/<repository>#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
