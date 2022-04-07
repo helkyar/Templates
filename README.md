@@ -8,21 +8,22 @@ Clone this repository and delete both, the `.git` as well as the `README.md` fil
 
 These instrucctios are valid for both folders:  
 Create a git repository on github (if you're planing on setting one up). Readme files are not included in the templates for obvious reasons.  
-Once everything is set, init the local repository. Commit the `.gitignore` file rigth away to avoid future problems.
+Once everything is set, init the local repository and connect with the remote one. Commit the `.gitignore` file rigth away to avoid future problems.
 
     git init
+    git remote add origin https://github.com/username/new_repo
+    git pull origin main
     git add .gitignore
     git commit -m "Add gitignore"
 
-Before the inital commit of the project edit the `package.json` files as you see fit (in the `back` folder take into account that none of the database libraries are installed)
+Before the inital commit of the project edit the `package.json` files as you see fit (in the `back` folder take into account that there are no database dependencies specified)
 
     git add -A
     git commit -m "Initial commit"
-
-Now only thing left is to connect with the remote repository. And install all dependecies. Do it in this order unsless you want to wait till the installation process ends to link the repositories.
-
-    git remote add origin https://github.com/username/new_repo
     git push -u origin main
+
+Now only thing left is to install all dependecies.
+
     npm install
 
 ## Functionality
