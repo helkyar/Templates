@@ -2,9 +2,7 @@ const Manager = require("./Manager");
 const User = require("./models/UserModel");
 
 class UserManager extends Manager {
-  static table = "users";
-  static columns = ["username", "password"];
-  static queries = Manager.createQuerys(this.table, this.columns);
+  static queries = this.createQuerys(User.name, User.columns());
 
   // Query Execution _______________________________________________________________________
   static async findAll() {

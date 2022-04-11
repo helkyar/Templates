@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const userSchema = new mongoose.Schema({
-  name: String,
-  // password: String,
+const templateSchema = new mongoose.Schema({
+  column1: String,
+  column2: String,
   // email: {
   //   type: String,
   //   required: true,
@@ -25,6 +25,6 @@ const userSchema = new mongoose.Schema({
   //   bestFriend: mongoose.SchemaTypes.ObjectId,
   //   hobbies: [String],
 });
-module.exports = mongoose.model("pathofglory", userSchema);
+module.exports = mongoose.model("template", templateSchema);
 // const collection = async () => await Model.createCollection();
 // collection();

@@ -16,4 +16,9 @@ module.exports = class Template {
       column2: this.#column2,
     };
   }
+
+  static name = "templates";
+  static columns() {
+    return ["column1", "column2"];
+  }
 };

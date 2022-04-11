@@ -2,9 +2,7 @@ const Manager = require("./Manager");
 const Template = require("./models/TemplateModel");
 
 class TemplateManager extends Manager {
-  static table = "templates";
-  static columns = ["column1", "column2"];
-  static queries = Manager.createQuerys(this.table, this.columns);
+  static queries = this.createQuerys(Template.name, Template.columns());
 
   // Query Execution _______________________________________________________________________
   static async findAll() {

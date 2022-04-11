@@ -16,4 +16,9 @@ module.exports = class User {
       password: this.#password,
     };
   }
+
+  static name = "users";
+  static columns() {
+    return ["username", "password"];
+  }
 };

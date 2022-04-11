@@ -1,9 +1,9 @@
 const Manager = require("./Manager");
-const schema = require("./schemas/userSchema");
+const schema = require("./schemas/templateSchema");
 
-module.exports = class UserManager extends Manager {
-  static async create(user) {
-    return await this.executeQuery(schema, this.querys.insert, [user]);
+module.exports = class TemplateManager extends Manager {
+  static async create(template) {
+    return await this.executeQuery(schema, this.querys.insert, [template]);
   }
   static async find({ id }) {
     return await this.executeQuery(schema, this.querys.find, [{ _id: id }]);
@@ -11,12 +11,8 @@ module.exports = class UserManager extends Manager {
   static async findAll() {
     return await this.executeQuery(schema, this.querys.findAll);
   }
-  static async findName({ username }) {
-    return await this.executeQuery(schema, this.querys.find, [{ username }]);
-  }
-
-  static async update(user, { id }) {
-    const params = [{ _id: id }, user];
+  static async update(template, { id }) {
+    const params = [{ _id: id }, template];
     return await this.executeQuery(schema, this.querys.update, params);
   }
   static async delete({ id }) {

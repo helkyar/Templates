@@ -8,7 +8,11 @@ module.exports = class Manager {
   };
 
   static querys = {
-    save: "create",
+    insert: "create",
+    update: "updateOne",
+    findAll: "find",
+    delete: "deleteOne",
+    find: "findOne",
   };
 
   static async connect() {
@@ -16,13 +20,15 @@ module.exports = class Manager {
     await mongoose.connect(`mongodb://${host}:${port}/${name}`);
   }
 
-  static async executeQuery(schema, params, query) {
+  static async executeQuery(schema, query, params) {
     await this.connect();
     try {
-      const user = await schema[query]({ params });
-      return user;
+      const result = await schema[query](...params);
+      return [result];
     } catch (error) {
-      console.log(error);
+      console.log("QUERY ERROR: ", query, error);
+    } finally {
+      mongoose.disconnect();
     }
   }
 };
