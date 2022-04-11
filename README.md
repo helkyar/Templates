@@ -16,7 +16,7 @@ Once everything is set, init the local repository and connect with the remote on
     git add .gitignore
     git commit -m "Add gitignore"
 
-Before the inital commit of the project edit the `package.json` files as you see fit (in the `back` folder take into account that there are no database dependencies specified)
+Before the inital commit of the project edit the `package.json` files as you see fit. In the `back` folder take into account that all database dependencies are declared, edit the file before installing. The `front` folder includes axios dependency, but fetch alternatives are also there.
 
     git add -A
     git commit -m "Initial commit"
