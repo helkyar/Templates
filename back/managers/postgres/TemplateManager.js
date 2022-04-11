@@ -2,9 +2,8 @@ const Manager = require("./Manager");
 const Template = require("./models/TemplateModel");
 
 class TemplateManager extends Manager {
-  static queries = this.createQuerys(Template.name, Template.columns());
+  static queries = this.createQuerys(Template.name, Template.columns);
 
-  // Query Execution _______________________________________________________________________
   static async findAll() {
     return await this.executeQuery(Template, this.queries.findAll);
   }

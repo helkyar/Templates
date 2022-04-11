@@ -1,4 +1,7 @@
 module.exports = class User {
+  static name = "users";
+  static columns = ["username", "password"];
+
   #id;
   #username;
   #password;
@@ -15,10 +18,5 @@ module.exports = class User {
       username: this.#username,
       password: this.#password,
     };
-  }
-
-  static name = "users";
-  static columns() {
-    return ["username", "password"];
   }
 };
