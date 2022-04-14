@@ -36,9 +36,7 @@ module.exports = class Manager {
         ? await client.query(query, params)
         : await client.query(query);
 
-      return data.rows.map((e) => new Model(e).getObject());
-
-      //On error returns: "null"; to diferenciate from no data: "[]"
+      return data.rows.map((row) => new Model(row).getObject());
     } catch (error) {
       console.log("Query Error: ", query, error);
       return null;
