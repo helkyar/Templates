@@ -33,7 +33,14 @@ module.exports = class Manager {
           ? await model[query]()
           : await model[query](...params)
       )
-      .then((res) => [res?.get({ plain: true })])
+      .then((res) => {
+        if (query === this.queries.update) {
+          return res[1].map((e) => e.dataValues);
+        } else if (query === this.queries.findAll) {
+          return res.map((e) => e.dataValues);
+        }
+        return res?.dataValues ? [res.dataValues] : [];
+      })
       .catch((error) => {
         console.log("Query Error: ", query, error);
         return null;

@@ -10,12 +10,20 @@ module.exports = class TemplateManager extends Manager {
     return await this.executeQuery(Template, this.queries.find, [id]);
   }
 
+  static async findValue(value) {
+    params = { where: value };
+    return await this.executeQuery(Template, this.queries.find, [params]);
+  }
+
   static async create(params) {
     return await this.executeQuery(Template, this.queries.insert, [params]);
   }
 
   static async update({ column1, column2 }, { id }) {
-    const params = [{ column1, column2 }, { where: { id } }];
+    const params = [
+      { column1, column2 },
+      { where: { id }, returning: true },
+    ];
     return await this.executeQuery(Template, this.queries.update, params);
   }
 
